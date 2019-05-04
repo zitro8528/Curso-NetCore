@@ -30,6 +30,16 @@ namespace MovilVentas_Modulo1.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
+
+            var msg = Configuration["Entorno"];
+
+            var cs = Configuration["ConnectionStrings:SqlServer"];
+
+
+            var cs2 = Configuration.GetConnectionString("SqlServer");
+
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
 
